@@ -1,9 +1,7 @@
+int a, b, c;
 int result;
-int a;
-int b;
-int c;
 a = 8;
-b = 5;
-c = 3 - a;
-result = a * b - ( 3 + b ) * ( c - a );
+b = 6 / 2;
+c = ( a + b ) * ( a - 3 );
+result = c / 5 + a * b - ( c - 1 );
 return result;
