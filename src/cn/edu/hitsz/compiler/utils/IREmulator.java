@@ -44,6 +44,12 @@ public class IREmulator {
                     environment.put(instruction.getResult(), lhs * rhs);
                 }
 
+                case DIV -> {
+                    final var lhs = eval(instruction.getLHS());
+                    final var rhs = eval(instruction.getRHS());
+                    environment.put(instruction.getResult(), lhs / rhs);
+                }
+
                 case RET -> this.returnValue = eval(instruction.getReturnValue());
 
                 default -> throw new RuntimeException("Unknown instruction kind: " + instruction.getKind());
